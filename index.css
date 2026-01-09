@@ -10,7 +10,7 @@ header {
     background-size: cover;
     background-position: center;
     height: 167px;
-    padding: 46px;
+    padding: 46px 1rem;
     margin-bottom: 20px;
 }
 h1, h2, h3 {
@@ -22,24 +22,46 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 p {
     margin: 0;
     font-size: 22px;
     line-height: 1.5;
 }
 
-.menu-container {
-    padding: 46px;
-    height: 140px;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 320px;
+}
+
+/* Main Container */
+.main-container {
+    max-width: 1280px;
     margin: 0 auto;
-    min-width: 250px;
-    width: 100%;
-    max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 45px;
-    
+    align-items: center;
+}
 
+/* Menu Section */
+.menu-container {
+    padding: 46px auto;
+    margin: 0 auto 50px;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;   
+    position: relative; 
    
 }
 
@@ -47,7 +69,12 @@ p {
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid #D2D2D2;
-    padding-bottom: 50px;  
+    padding: 50px 16px;  
+}
+
+.menu-item:hover {
+    cursor: pointer;
+    background-color: #ebebeb;
 }
 
 
@@ -59,7 +86,7 @@ p {
 .menu-item-info {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    margin: auto 20px;
     justify-content: start;
 }
 
@@ -81,7 +108,7 @@ color: #8B8B8B;
 .add-to-order {
 color: #3C3C3C;
 background-color: transparent;
-margin: auto 0 auto auto;
+margin: auto 8px auto auto;
 border: 1px solid #DEDEDE;
 border-radius: 50%;
 cursor: pointer;
@@ -92,5 +119,145 @@ font-size: 16px;
 }
 
 .add-to-order:hover {
-    background-color: #DEDEDE;
+    background-color: #16DB99;
+    color: #fff;
+}
+
+.add-to-order::after {
+    content: "+";
+    font-size: 20px;
+}
+
+
+/* Order Section */
+
+.order-container {
+    width: 300px;
+    max-width: 1280px;
+    margin: 0 auto 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+.order-list {
+    border-bottom: 2px solid #393333;
+    margin: 16px;
+    padding: 16px 0px;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+ul.order-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-item {
+    font-size: 28px;
+}
+
+.remove-item {
+font-size: 12px;
+color: #8B8B8B;
+cursor: pointer;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.remove-item:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.total-price {
+    font-size: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+box-sizing: border-box;
+    
+}
+
+
+/* Card Details Modal */
+.card-details-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-details-form {
+    padding: 30px 20px ;
+    box-shadow: 5px 5px 256px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.card-details-form input {
+    padding: 12px;
+    margin: 12px 0;
+    width: 100%;
+    border: 1px solid #757575;
+}
+
+
+/* Order Completed */
+.order-complete-state {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECfdf5;
+    padding: 50px;
+    margin: 0 0 200px;
+}
+
+.order-complete-state h2 {
+    font-size: 28px;
+    color: #065F46;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Utility Classes */
+/* Button */
+.btn {
+    background-color: #16DB99;
+    color: #fff;
+    font-weight: bold;
+    padding: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    text-wrap: nowrap ;
+    width: 300px;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+    color: #fff;
+}
+
+.btn:hover:not(:disabled) {
+    cursor: pointer;
+    background-color: #13c78b;
+    transition: .6s;
+    transform: scale(1.05);
+}
+
+.open {
+    display: flex;
 }
