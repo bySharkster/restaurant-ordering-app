@@ -1,3 +1,96 @@
 body {
     margin: 0;
+    padding: 0;
+    font-family: "Smythe", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 } 
+
+header {
+    color: #fff;
+    background-image: url("./public/images/bg-img.png");
+    background-size: cover;
+    background-position: center;
+    height: 167px;
+    padding: 46px;
+    margin-bottom: 20px;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 39px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.menu-container {
+    padding: 46px;
+    height: 140px;
+    margin: 0 auto;
+    min-width: 250px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    
+
+   
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #D2D2D2;
+    padding-bottom: 50px;  
+}
+
+
+.menu-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.menu-item-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: start;
+}
+
+.menu-item-name {
+    font-size: 28px;
+    line-height: .75;
+    margin-bottom: 8px;
+}
+
+.ingredients {
+font-size: 16px;
+color: #8B8B8B;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.add-to-order {
+color: #3C3C3C;
+background-color: transparent;
+margin: auto 0 auto auto;
+border: 1px solid #DEDEDE;
+border-radius: 50%;
+cursor: pointer;
+width: 50px;
+height: 50px;
+text-align: center;
+font-size: 16px;
+}
+
+.add-to-order:hover {
+    background-color: #DEDEDE;
+}
